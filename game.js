@@ -759,15 +759,6 @@ function renderBoard(state) {
                 cell.classList.add("homeBase");
             }
 
-            // Ô đích chiến thắng
-            if (
-                position === "a1" ||
-                position === "i9"
-            ) {
-                cell.classList.add("winTarget");
-            }
-
-
             // ---------------------------------------
             // Quân
             // ---------------------------------------
