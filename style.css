@@ -704,3 +704,7 @@ button:hover {
         border-width: 2px;
     }
 }
+
+.piece {
+    pointer-events: none;
+}
