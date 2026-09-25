@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OTTv2 - Đấm Lá Kéo</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="app">
+
+    <!-- ================= MENU ================= -->
+    <section id="menuScreen" class="screen">
+
+        <div class="menuCard">
+
+            <h1>OTTv2</h1>
+            <h2>🪨 Đấm - 📄 Lá - ✂️ Kéo</h2>
+
+            <p class="description">
+                Game chiến thuật 2 người chơi
+            </p>
+
+            <input
+                id="nameInput"
+                type="text"
+                placeholder="Nhập tên của bạn"
+                maxlength="20"
+            >
+
+            <input
+                id="roomInput"
+                type="text"
+                placeholder="Nhập mã phòng"
+                maxlength="20"
+            >
+
+            <button id="createRoomBtn">
+                Tạo phòng
+            </button>
+
+            <button id="joinRoomBtn">
+                Vào phòng
+            </button>
+
+            <button id="watchRoomBtn">
+                Xem trận
+            </button>
+
+            <div class="rules">
+
+                <h3>Luật chơi</h3>
+
+                <p>• Bàn cờ 9 × 9</p>
+
+                <p>• Mỗi quân đi đúng 1 ô theo 8 hướng</p>
+
+                <p>• 🪨 Đấm thắng ✂️ Kéo</p>
+
+                <p>• ✂️ Kéo thắng 📄 Lá</p>
+
+                <p>• 📄 Lá thắng 🪨 Đấm</p>
+
+                <p>• Cùng loại không thể ăn nhau</p>
+
+                <p>• Ăn hết một loại quân của đối thủ → thắng</p>
+
+                <p>• Đưa quân tới <b>a1</b> hoặc <b>i9</b> → thắng</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GAME ================= -->
+
+    <section id="gameScreen" class="screen hidden">
+
+        <header class="gameHeader">
+
+            <div>
+                <h1>OTTv2</h1>
+                <span id="roomDisplay">
+                    Phòng: -
+                </span>
+            </div>
+
+            <div id="roleDisplay">
+                Đang kết nối...
+            </div>
+
+        </header>
+
+
+        <!-- Người chơi -->
+
+        <div class="playersInfo">
+
+            <div class="playerBox bluePlayer">
+
+                <div class="playerColor">
+                    🔵 Xanh
+                </div>
+
+                <strong id="blueName">
+                    Đang chờ...
+                </strong>
+
+            </div>
+
+
+            <div class="playerBox redPlayer">
+
+                <div class="playerColor">
+                    🔴 Đỏ
+                </div>
+
+                <strong id="redName">
+                    Đang chờ...
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- Thông tin trận -->
+
+        <div class="gameInfo">
+
+            <div id="turnDisplay">
+                Đang chờ...
+            </div>
+
+            <div id="statusDisplay">
+                -
+            </div>
+
+        </div>
+
+
+        <!-- Bàn cờ -->
+
+        <div class="boardWrapper">
+
+            <div class="coordinates top">
+                <span>a</span>
+                <span>b</span>
+                <span>c</span>
+                <span>d</span>
+                <span>e</span>
+                <span>f</span>
+                <span>g</span>
+                <span>h</span>
+                <span>i</span>
+            </div>
+
+
+            <div class="boardArea">
+
+                <div class="coordinates left">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                </div>
+
+                <div id="board"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="help">
+
+            <p>
+                🪨 Đấm &nbsp;&nbsp;
+                📄 Lá &nbsp;&nbsp;
+                ✂️ Kéo
+            </p>
+
+            <p>
+                Chọn quân của mình rồi chọn ô muốn đi.
+            </p>
+
+        </div>
+
+
+        <button id="backBtn" class="backButton">
+            Rời trận
+        </button>
+
+    </section>
+
+</div>
+
+
+<script type="module" src="game.js"></script>
+
+</body>
+</html>
